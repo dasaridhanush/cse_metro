@@ -24,8 +24,8 @@ source=st.selectbox("Source Station",stations)
 destination=st.selectbox("Destination Station",stations)
 no_tickets=st.number_input("Number of tickets",min_value=1,value=1)
 price_per_ticket=30
-total_amount=no_tickets * price_per_ticket
-st.info(f" Total Amount:$(total_amount)")
+total_amount=no_tickets*price_per_ticket
+st.info(f" Total Amount:(total_amount)")
 
 if st.button("Book Ticket"):
     if name.strip()== "":
@@ -55,4 +55,5 @@ if st.button("Book Ticket"):
         st.write(f"Tickets:{no_tickets}")
         st.write(f"Amount Paid:{total_amount}")
         st.image(qr_bytes, width=250)
+
 
